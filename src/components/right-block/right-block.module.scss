@@ -1,0 +1,25 @@
+@import '../../scss-widgets/mixins';
+
+
+.grid_container{
+   @include grid-center(200px,350,4);
+    justify-content: right;
+    flex-grow: 1;
+    gap: 20px;
+    animation: appearance 500ms linear 1;
+}
+
+
+.right_block{
+    @include flex-center;
+    
+}
+
+@keyframes appearance {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

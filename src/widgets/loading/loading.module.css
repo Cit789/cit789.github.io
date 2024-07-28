@@ -1,0 +1,57 @@
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+  height: 150px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 15px dotted rgb(1, 183, 255);
+  -webkit-animation: rotate 1000ms linear infinite;
+          animation: rotate 1000ms linear infinite;
+}
+
+.inside_loading {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 10px dotted rgb(1, 183, 255);
+  -webkit-animation: reverse_rotate 500ms linear infinite;
+          animation: reverse_rotate 500ms linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  50% {
+    scale: 1.2;
+  }
+  to {
+    scale: 1;
+    rotate: 360deg;
+  }
+}
+
+@keyframes rotate {
+  50% {
+    scale: 1.2;
+  }
+  to {
+    scale: 1;
+    rotate: 360deg;
+  }
+}
+@-webkit-keyframes reverse_rotate {
+  to {
+    rotate: -360deg;
+  }
+}
+@keyframes reverse_rotate {
+  to {
+    rotate: -360deg;
+  }
+}

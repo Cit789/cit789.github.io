@@ -1,0 +1,22 @@
+@import '../../scss-widgets/mixins';
+
+.weather_container {
+	@include flex-column-center;
+	justify-content: space-around;
+	color: white;
+	border-radius: 15px;
+	background: linear-gradient(146deg, rgba(8,158,255,1) 16%, rgba(1,177,255,1) 55%);
+}
+
+.weather_max_deegres {
+	font-size: clamp(25px, 8vw,50px);
+}
+
+.weather_min_deegres {
+	font-size: clamp(20px, 6vw, 40px);
+}
+
+
+.weather_data{
+	font-size: clamp(18px, 6vw, 30px);
+}

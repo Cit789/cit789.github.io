@@ -1,0 +1,37 @@
+@import '../../scss-widgets/mixins';
+
+
+.loading{
+    @include flex-center;
+    width: 150px;
+    height: 150px;
+    background-color: transparent ;
+    border-radius: 50%;
+    border: 15px dotted rgb(1, 183, 255);
+    animation: rotate 1000ms linear infinite;
+}
+.inside_loading{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 10px dotted rgb(1, 183, 255);
+    animation: reverse_rotate 500ms linear infinite;
+}
+
+
+@keyframes rotate {
+    50%{
+        scale:1.2
+    }
+    to{
+        scale: 1;
+        rotate: 360deg;
+    }
+}
+
+
+@keyframes reverse_rotate {
+    to{
+        rotate: -360deg;
+    }
+}
