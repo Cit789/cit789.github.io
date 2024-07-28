@@ -1,25 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Server from './utils/Server'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+	console.log(1)
+	Server.weather_getForecast(55, 55, 16, 16).then(data => console.log(data))
 }
 
-export default App;
+export default App
