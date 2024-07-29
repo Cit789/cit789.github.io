@@ -3,8 +3,18 @@
   padding: 0;
 }
 
+#root {
+  height: 100%;
+}
+
+html {
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+
 body {
-  padding: 0px 30px 0px 30px;
+  padding: 0px 30px 10px 30px;
+  height: 100%;
   background: linear-gradient(146deg, rgb(8, 191, 255) 14%, rgb(1, 108, 255) 55%);
   font-family: "Courier New", Courier, monospace;
 }

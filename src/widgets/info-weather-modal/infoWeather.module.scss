@@ -1,0 +1,37 @@
+.info_modal {
+    transition: 250ms;
+    transition-delay: 200ms;
+    pointer-events: none;
+	width: 250px;
+	height: 400px;
+    border-radius: 10px;
+    border: 3px solid rgb(1, 162, 255);
+    backdrop-filter: blur(6px);
+	position: absolute;
+	z-index: 10;
+	opacity: 0;
+}
+
+.open {
+	opacity: 1;
+}
+
+.weather_info_logotype{
+    text-align: center;
+    font-size: clamp(20px,7vw,30px);
+    margin-top: 10px;
+    color:white;
+}
+
+.weather_list{
+    margin:15px 0px 15px 10px;
+    width: 100%;
+    list-style: none;
+    &_item{
+        color:white;
+        width: 100%;
+        font-weight: 600;
+        font-size: clamp(18px,7vw,20px);
+        margin-top: 15px;
+    }
+}

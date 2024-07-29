@@ -2,21 +2,63 @@
 
 .weather_container {
 	@include flex-column-center;
-	justify-content: space-around;
+	transition: 250ms;
+	justify-content: space-evenly;
+	padding: 0px 10px;
 	color: white;
 	border-radius: 15px;
-	background: linear-gradient(146deg, rgba(8,158,255,1) 16%, rgba(1,177,255,1) 55%);
+	user-select: none;
+	background: linear-gradient(
+		145deg,
+		rgba(8, 158, 255, 1) 16%,
+		rgba(1, 177, 255, 1) 55%
+	);
+	opacity: 0;
+
+	&_max_deegres {
+		font-size: clamp(25px, 6vw, 50px);
+	}
+
+	&_min_deegres {
+		font-size: clamp(18px, 6vw, 40px);
+	}
+
+	&_data {
+		font-size: clamp(18px, 3.5vw, 30px);
+	}
+}
+.weather_container:hover {
+	scale: 1.05;
 }
 
-.weather_max_deegres {
-	font-size: clamp(25px, 8vw,50px);
+@for $i from 0 through 4 {
+	.anim_up_#{$i} {
+		transform: translateY(-5vw);
+		animation: translate_up 500ms linear 1;
+		animation-delay: #{$i * 100 + 50}ms;
+		animation-fill-mode: forwards;
+	}
 }
 
-.weather_min_deegres {
-	font-size: clamp(20px, 6vw, 40px);
+@for $a from 0 through 4 {
+	.anim_down_#{$a} {
+		transform: translateY(5vw);
+		animation: translate_down 500ms linear 1;
+		animation-delay: #{$a * 100 + 50}ms;
+		animation-fill-mode: forwards;
+	}
 }
 
+@keyframes translate_up {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 
-.weather_data{
-	font-size: clamp(18px, 6vw, 30px);
+@keyframes translate_down {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }

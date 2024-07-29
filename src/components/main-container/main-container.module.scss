@@ -1,7 +1,9 @@
 @import '../../scss-widgets/mixins';
 
 .main_container{
-    @include grid-center(1fr,500,2);
-    gap:50px;
-    height: 100vh;
+   @include flex-center;
+   justify-content: space-between;
+   @media(max-width:1024px){
+    @include flex-column-center;
+   }
 }

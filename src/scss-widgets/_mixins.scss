@@ -21,5 +21,5 @@
 	justify-content: center;
 	align-content: center;
 	grid-template-columns: repeat($repeat,$column-size);
-	grid-auto-rows: #{$auto-rows}px;
+	grid-auto-rows: #{$auto-rows};
 }
