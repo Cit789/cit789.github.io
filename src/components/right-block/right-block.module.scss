@@ -1,48 +1,43 @@
 @import '../../scss-widgets/mixins';
 
-
-.grid_container{
-   @include grid-center(210px,350px,4);
-    justify-content: right;
-    flex-grow: 1;
-    gap: 20px;
-    animation: appearance 500ms linear 1;
+.grid_container {
+	@include grid-center(210px, 350px, 4);
+	justify-content: right;
+	flex-grow: 1;
+	gap: 20px;
+	animation: appearance 500ms linear 1;
 }
 
-
-.right_block{
-    @include flex-center;
-    
+.right_block {
+	@include flex-center;
 }
 
 @keyframes appearance {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
-@media (min-width:320px) and (max-width:500px){
-    .grid_container{
-        @include grid-center(45vw,20vh,2);
-        gap:10px;
-    }
+@media (min-width: 320px) and (max-width: 500px) {
+	.grid_container {
+		@include grid-center(45vw, 25vh, 2);
+		gap: 10px;
+	}
 }
 
-@media(min-width:500px) and (max-width:760px){
-    .grid_container{
-        @include grid-center(30vw,25vh,3);
-        gap:10px;
-    }
+@media (min-width: 500px) and (max-width: 760px) {
+	.grid_container {
+		@include grid-center(30vw, 30vh, 3);
+		gap: 10px;
+	}
 }
 
-@media(min-width:760px) and (max-width:1100px){
-    .grid_container{
-        @include grid-center(25vw,300px,3);
-        gap:10px;
-    }
+@media (min-width: 760px) and (max-width: 1100px) {
+	.grid_container {
+		@include grid-center(30vw, 300px, 3);
+		
+	}
 }
-        
