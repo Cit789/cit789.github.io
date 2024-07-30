@@ -2,8 +2,8 @@ import cl from './right-block.module.css'
 import WeatherBlock from '../../widgets/weather_block/weather_block'
 import Loading from '../../widgets/loading/loading'
 import InfoWeatherModal from '../../widgets/info-weather-modal/infoWeather'
-import { useEffect, useState } from 'react'
 import Server from '../../utils/Server'
+import { useEffect, useState } from 'react'
 const RightBlock = () => {
 	const [server_data, setServer_data] = useState(false)
 	const [modal_offsets, setModal_offsets] = useState([-100, -100])
@@ -25,7 +25,7 @@ const RightBlock = () => {
 	}
 
 	useEffect(() => {
-		Server.weather_getForecast(55, 55, 8).then(data => {
+		Server.weather_getForecast(45.04, 38.97, 8).then(data => {
 			const request_result = {
 				temp_max: data.daily?.temperature_2m_max,
 				temp_min: data.daily?.temperature_2m_min,

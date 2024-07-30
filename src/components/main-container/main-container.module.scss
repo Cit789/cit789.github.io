@@ -4,8 +4,10 @@
 
 .main_container{
     @include grid-center(1fr,750px,2);
+    
    height: 100%;
-   @media(max-width:1100px){
+   @media(max-width:1300px){
     @include grid-center(1fr,auto,1);
+    grid-template-rows: auto calc(1000px + 10vh);
    }
 }

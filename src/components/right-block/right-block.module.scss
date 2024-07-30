@@ -21,14 +21,14 @@
 	}
 }
 
-@media (min-width: 320px) and (max-width: 500px) {
+@media (min-width: 320px) and (max-width: 550px) {
 	.grid_container {
 		@include grid-center(45vw, 25vh, 2);
 		gap: 10px;
 	}
 }
 
-@media (min-width: 500px) and (max-width: 760px) {
+@media (min-width: 550px) and (max-width: 760px) {
 	.grid_container {
 		@include grid-center(30vw, 30vh, 3);
 		gap: 10px;
@@ -37,7 +37,14 @@
 
 @media (min-width: 760px) and (max-width: 1100px) {
 	.grid_container {
-		@include grid-center(30vw, 300px, 3);
+		@include grid-center(22vw, 350px, 4);
+		gap: 10px;
 		
+	}
+}
+
+@media (min-width:1100px) and (max-width:1300px){
+	.grid_container{
+		@include grid-center(210px,350px,4)
 	}
 }

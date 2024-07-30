@@ -34,7 +34,7 @@
   font-size: clamp(18px, 6vw, 40px);
 }
 .weather_container_data {
-  font-size: clamp(18px, 3.5vw, 30px);
+  font-size: clamp(18px, 3vw, 30px);
 }
 
 .weather_container:hover {
