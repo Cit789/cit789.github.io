@@ -24,7 +24,6 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background: linear-gradient(145deg, rgb(8, 158, 255) 16%, rgb(1, 177, 255) 55%);
   opacity: 0;
 }
 .weather_container_max_deegres {
@@ -35,10 +34,15 @@
 }
 .weather_container_data {
   font-size: clamp(18px, 3vw, 30px);
+  text-align: center;
 }
 
 .weather_container:hover {
   scale: 1.05;
+}
+
+#light {
+  background: linear-gradient(145deg, rgb(8, 158, 255) 16%, rgb(1, 177, 255) 55%);
 }
 
 .anim_up_0 {

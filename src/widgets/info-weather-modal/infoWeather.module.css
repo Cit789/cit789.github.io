@@ -6,13 +6,23 @@
   pointer-events: none;
   width: 250px;
   height: 400px;
+  border: 3px solid;
   border-radius: 10px;
-  border: 3px solid rgb(1, 162, 255);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
+  background-image: none;
   position: absolute;
   z-index: 10;
   opacity: 0;
+  color: white;
+}
+
+#light {
+  border-color: rgb(1, 162, 255);
+}
+
+#snowfall {
+  border-color: black;
 }
 
 .open {
@@ -23,7 +33,6 @@
   text-align: center;
   font-size: clamp(20px, 7vw, 30px);
   margin-top: 10px;
-  color: white;
 }
 
 .weather_list {
@@ -32,9 +41,14 @@
   list-style: none;
 }
 .weather_list_item {
-  color: white;
   width: 100%;
   font-weight: 600;
   font-size: clamp(18px, 7vw, 20px);
   margin-top: 15px;
+}
+
+@media (max-width: 1100px) {
+  .open {
+    display: none;
+  }
 }

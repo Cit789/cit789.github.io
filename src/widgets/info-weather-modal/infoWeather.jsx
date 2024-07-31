@@ -1,9 +1,13 @@
+import { useContext } from 'react'
+import { PageTheme } from '../../App'
 import cl from './infoWeather.module.css'
 
 const InfoWeatherModal = ({ offsetX, offsetY, isModalOpen, weather_info }) => {
+	const theme = useContext(PageTheme)
 	return (
 		<div
-			className={`${cl.info_modal} ${isModalOpen ? cl.open : null}`}
+			className={`${cl.info_modal} ${isModalOpen ? cl.open : null} ${theme}`}
+			id={cl[theme]}
 			style={{ top: `${offsetY}px`, left: `${offsetX}px` }}
 		>
 			<h2 className={cl.weather_info_logotype}>Информация о погоде на {weather_info.data}</h2>

@@ -86,7 +86,7 @@
     gap: 10px;
   }
 }
-@media (min-width: 1100px) and (max-width: 1300px) {
+@media (min-width: 1100px) and (max-width: 1400px) {
   .grid_container {
     display: grid;
     -webkit-box-pack: center;
@@ -94,7 +94,7 @@
             justify-content: center;
     -ms-flex-line-pack: center;
         align-content: center;
-    grid-template-columns: repeat(4, 210px);
+    grid-template-columns: repeat(4, 250px);
     grid-auto-rows: 350px;
   }
 }

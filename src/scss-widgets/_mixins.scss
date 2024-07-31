@@ -23,3 +23,9 @@
 	grid-template-columns: repeat($repeat,$column-size);
 	grid-auto-rows: #{$auto-rows};
 }
+
+@mixin background-image-standart{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}

@@ -3,11 +3,12 @@ import WeatherBlock from '../../widgets/weather_block/weather_block'
 import Loading from '../../widgets/loading/loading'
 import InfoWeatherModal from '../../widgets/info-weather-modal/infoWeather'
 import Server from '../../utils/Server'
+import getDayOfWeek from '../../utils/getWeekDay'
 import { useEffect, useState } from 'react'
-const RightBlock = () => {
+const RightBlock = ({ coordinates }) => {
 	const [server_data, setServer_data] = useState(false)
-	const [modal_offsets, setModal_offsets] = useState([-100, -100])
 	const [isModalOpen, setIsModalOpen] = useState(false)
+	const [modal_offsets, setModal_offsets] = useState([-200, -200])
 	const [modal_info, setModal_info] = useState({})
 	function cursorOnWeather(e, weather_info) {
 		setIsModalOpen(true)
@@ -21,11 +22,12 @@ const RightBlock = () => {
 	}
 	function cursorLeaveWeather() {
 		setIsModalOpen(false)
-		setModal_offsets([-100, -100])
+		setModal_offsets([-200, -200])
 	}
 
 	useEffect(() => {
-		Server.weather_getForecast(45.04, 38.97, 8).then(data => {
+		Server.weather_getForecast(coordinates[0], coordinates[1], 8,0,setServer_data).then(data => {
+			
 			const request_result = {
 				temp_max: data.daily?.temperature_2m_max,
 				temp_min: data.daily?.temperature_2m_min,
@@ -34,23 +36,23 @@ const RightBlock = () => {
 			}
 			setServer_data(request_result)
 		})
-	}, [])
-
+	}, [coordinates])
 	return (
 		<section className={cl.right_block}>
-			{server_data && (
+			{typeof server_data === 'object' && (
 				<div className={cl.grid_container}>
 					{server_data.temp_max.map((item, i) => {
 						const weather_info = {
 							temp_max: server_data.temp_max[i],
 							temp_min: server_data.temp_min[i],
 							wind_max: server_data.wind_max[i],
-							data:server_data.data[i]
+							data: server_data.data[i],
 						}
+
 						return (
 							<WeatherBlock
 								key={i}
-								data={weather_info.data}
+								data={weather_info.data + ` ${getDayOfWeek(weather_info.data)}`}
 								max_temp={weather_info.temp_max}
 								min_temp={weather_info.temp_min}
 								type_ofAnim={i < 4 ? `anim_up_${i}` : `anim_down_${i - 4}`}
@@ -67,7 +69,7 @@ const RightBlock = () => {
 				isModalOpen={isModalOpen}
 				weather_info={modal_info}
 			/>
-			{!server_data && <Loading />}
+			{typeof server_data !== 'object' && <Loading />}
 		</section>
 	)
 }

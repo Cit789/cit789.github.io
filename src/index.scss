@@ -1,22 +1,53 @@
-
-*{
+* {
 	margin: 0;
 	padding: 0;
 	// outline:1px solid red;
 }
-#root{
+#root {
 	height: 100%;
 }
 
-html{
+html {
 	min-height: 100vh;
 	overflow-y: scroll;
 }
 
-body{
-	padding: 0px 25px 10px 25px;
-	height: 100%;
-	
-	background: linear-gradient(146deg, rgba(8,191,255,1) 14%, rgba(1,108,255,1) 55%);
+body {
 	font-family: 'Courier New', Courier, monospace;
+}
+
+.dark {
+	border-color: rgb(99, 98, 98);
+	background: linear-gradient(
+		133deg,
+		rgb(51, 49, 43) 20%,
+		rgb(69, 70, 71) 100%
+	) ;
+}
+.light {
+	background-image: linear-gradient(
+		146deg,
+		rgba(8, 191, 255, 1) 14%,
+		rgba(1, 108, 255, 1) 55%
+	);
+}
+.snowfall {
+	border-color: rgb(99, 98, 98) ;
+	background-image: linear-gradient(
+		133deg,
+		rgb(190, 190, 190),
+		rgb(216, 215, 215)
+	) ;
+	* {
+		color: black ;
+	}
+}
+
+.rain {
+	border-color: rgb(99, 98, 98) ;
+	background: linear-gradient(
+		133deg,
+		rgb(173, 172, 172) 20%,
+		rgb(126, 134, 139) 100%
+	) ;
 }

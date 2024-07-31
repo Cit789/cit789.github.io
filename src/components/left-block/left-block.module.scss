@@ -1,0 +1,51 @@
+@import '../../scss-widgets/mixins';
+
+.left_block {
+	@include flex-center;
+	border-radius: 10px;
+	align-self: center;
+	height: 720px;
+	animation: appearance 400ms 1;
+	
+}
+
+@keyframes appearance {
+	from{
+		opacity: 0;
+		transform: translateY(-100px);
+	}to{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+#light{
+background: linear-gradient(
+		145deg,
+		rgb(12, 157, 253) 16%,
+		rgb(12, 155, 250) 55%
+	);
+}
+
+.logotypes {
+	margin: 15px;
+	width: 95%;
+	height: 90%;
+	color: white;
+	&_city {
+		font-size: clamp(30px, 7vw, 50px);
+	}
+	&_wind_speed,
+	&_degrees,
+	&_pressure {
+		margin-top: 10px;
+		font-size: clamp(30px, 5.5vw, 45px);
+	}
+}
+
+
+@media(max-width:1400px){
+	.left_block{
+		height: clamp(400px,90vw,680px);
+	}
+}

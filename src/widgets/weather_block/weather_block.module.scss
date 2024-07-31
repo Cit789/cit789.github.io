@@ -8,11 +8,7 @@
 	color: white;
 	border-radius: 15px;
 	user-select: none;
-	background: linear-gradient(
-		145deg,
-		rgba(8, 158, 255, 1) 16%,
-		rgba(1, 177, 255, 1) 55%
-	);
+	
 	opacity: 0;
 
 	&_max_deegres {
@@ -25,10 +21,19 @@
 
 	&_data {
 		font-size: clamp(18px, 3vw, 30px);
+		text-align: center;
 	}
 }
 .weather_container:hover {
 	scale: 1.05;
+}
+
+#light{
+	background: linear-gradient(
+		145deg,
+		rgba(8, 158, 255, 1) 16%,
+		rgba(1, 177, 255, 1) 55%
+	);
 }
 
 @for $i from 0 through 4 {

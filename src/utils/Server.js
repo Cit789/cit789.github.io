@@ -9,7 +9,6 @@ export default class Server {
 		temperature: ',temperature_2m',
 		isday: ',is_day',
 		isRain: ',rain',
-		isShowers: ',showers',
 		isSnowfall: ',snowfall',
 		pressure: ',surface_pressure',
 		wind_speed: ',wind_speed_10m',
@@ -29,8 +28,12 @@ export default class Server {
 		long,
 		lat,
 		forecast_days = 7,
-		past_days = 0
+		past_days = 0,
+		setIsLoading = false
 	) {
+		if (setIsLoading) {
+			setIsLoading(true)
+		}
 		const dailyRequests = Object.values(Server.#dailyReq).join('')
 		const meta = await fetch(
 			Server.#start_url +
@@ -39,7 +42,10 @@ export default class Server {
 		)
 		return await meta.json()
 	}
-	static async weather_getCurrent(long, lat) {
+	static async weather_getCurrent(long, lat, setIsLoading = false) {
+		if (setIsLoading) {
+			setIsLoading(true)
+		}
 		const currentRequests = Object.values(Server.#currentReq).join('')
 		const meta = await fetch(
 			Server.#start_url +

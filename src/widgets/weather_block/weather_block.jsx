@@ -1,9 +1,20 @@
+import { useContext } from 'react'
+import { PageTheme } from '../../App'
 import cl from './weather_block.module.css'
 
-const WeatherBlock = ({ max_temp, min_temp, data, type_ofAnim,onMouseMove,onMouseLeave }) => {
+const WeatherBlock = ({
+	max_temp,
+	min_temp,
+	data,
+	type_ofAnim,
+	onMouseMove,
+	onMouseLeave,
+}) => {
+	const theme = useContext(PageTheme)
 	return (
 		<article
-			className={`${cl.weather_container} ${cl[type_ofAnim]}`}
+			className={`${cl.weather_container} ${cl[type_ofAnim]} ${theme}`}
+			id={cl[theme]}
 			onMouseMove={onMouseMove}
 			onMouseLeave={onMouseLeave}
 		>

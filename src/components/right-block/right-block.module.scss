@@ -12,6 +12,9 @@
 	@include flex-center;
 }
 
+
+
+
 @keyframes appearance {
 	from {
 		opacity: 0;
@@ -43,8 +46,8 @@
 	}
 }
 
-@media (min-width:1100px) and (max-width:1300px){
+@media (min-width:1100px) and (max-width:1400px){
 	.grid_container{
-		@include grid-center(210px,350px,4)
+		@include grid-center(250px,350px,4)
 	}
 }
