@@ -1,8 +1,10 @@
 import { useContext } from 'react'
 import { PageTheme } from '../../App'
+
 import cl from './infoWeather.module.css'
 
 const InfoWeatherModal = ({ offsetX, offsetY, isModalOpen, weather_info }) => {
+	
 	const theme = useContext(PageTheme)
 	return (
 		<div

@@ -39,11 +39,30 @@
   top: 45px;
   z-index: 10;
   width: 100%;
+  height: auto;
   border-radius: 10px;
   font-size: clamp(20px, 7vw, 30px);
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border: none;
   outline: none;
+}
+.variables .list_citys option {
+  height: 10px;
+}
+.variables .list_citys option:hover {
+  background-color: rgb(214, 214, 214);
+}
+
+.openSearch {
+  visibility: visible;
+}
+
+.closeSearch {
+  visibility: hidden;
+}
+
+.list_citys::-webkit-scrollbar {
+  display: none;
 }
 
 .search {

@@ -18,7 +18,15 @@
     animation: reverse_rotate 500ms linear infinite;
 }
 
-
+#dark{
+    border-color: rgb(92, 92, 92);
+}
+#snowfall{
+    border-color: black;
+}
+#cloudness, #rain{
+    border-color: white;
+}
 @keyframes rotate {
     50%{
         scale:1.2

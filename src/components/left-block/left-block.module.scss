@@ -22,25 +22,67 @@
 #light{
 background: linear-gradient(
 		145deg,
-		rgb(12, 157, 253) 16%,
+		rgb(18, 160, 255) 16%,
 		rgb(12, 155, 250) 55%
 	);
 }
 
 .logotypes {
-	margin: 15px;
+	@include flex-column-center;
+	justify-content: space-evenly;
 	width: 95%;
 	height: 90%;
 	color: white;
+
 	&_city {
-		font-size: clamp(30px, 7vw, 50px);
+		text-align: center;
+		font-size: clamp(30px, 8vw, 60px);
 	}
 	&_wind_speed,
 	&_degrees,
 	&_pressure {
-		margin-top: 10px;
-		font-size: clamp(30px, 5.5vw, 45px);
+		text-align: center;
+		margin-top: 25px;
+		font-size: clamp(30px, 6vw, 45px);
 	}
+}
+
+@mixin weather-logo($size:50){
+	@include background-image-standart;
+	content: '';
+	margin-left: 10px;
+	display: inline-block;
+	width: clamp(30px,6vw,#{$size}px);
+	height:clamp(30px,6vw,#{$size}px);
+}
+
+.logotypes_city#dark::after{
+	@include background-image-standart;
+	@include weather-logo;
+	background-image: url(../../svg/moon-svgrepo-com.svg);
+}
+
+.logotypes_city#snowfall::after{
+	@include background-image-standart;
+	@include weather-logo;
+	background-image: url(../../svg/snow-alt-svgrepo-com.svg);
+}
+
+.logotypes_city#rain::after{
+	@include background-image-standart;
+	@include weather-logo(60);
+	background-image: url(../../svg/rain-svgrepo-com.svg);
+}
+
+.logotypes_city#light::after{
+	@include background-image-standart;
+	@include weather-logo(60);
+	background-image: url(../../svg/sun-svgrepo-com.svg);
+}
+.logotypes_city#cloudness::after{
+	@include background-image-standart;
+	@include weather-logo(60);
+	background-image: url(../../svg/cloud-sun-svgrepo-com.svg);
 }
 
 

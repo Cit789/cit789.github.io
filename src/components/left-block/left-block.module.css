@@ -42,21 +42,113 @@
   }
 }
 #light {
-  background: linear-gradient(145deg, rgb(12, 157, 253) 16%, rgb(12, 155, 250) 55%);
+  background: linear-gradient(145deg, rgb(18, 160, 255) 16%, rgb(12, 155, 250) 55%);
 }
 
 .logotypes {
-  margin: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 95%;
   height: 90%;
   color: white;
 }
 .logotypes_city {
-  font-size: clamp(30px, 7vw, 50px);
+  text-align: center;
+  font-size: clamp(30px, 8vw, 60px);
 }
 .logotypes_wind_speed, .logotypes_degrees, .logotypes_pressure {
-  margin-top: 10px;
-  font-size: clamp(30px, 5.5vw, 45px);
+  text-align: center;
+  margin-top: 25px;
+  font-size: clamp(30px, 6vw, 45px);
+}
+
+.logotypes_city#dark::after {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  margin-left: 10px;
+  display: inline-block;
+  width: clamp(30px, 6vw, 50px);
+  height: clamp(30px, 6vw, 50px);
+  background-image: url(../../svg/moon-svgrepo-com.svg);
+}
+
+.logotypes_city#snowfall::after {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  margin-left: 10px;
+  display: inline-block;
+  width: clamp(30px, 6vw, 50px);
+  height: clamp(30px, 6vw, 50px);
+  background-image: url(../../svg/snow-alt-svgrepo-com.svg);
+}
+
+.logotypes_city#rain::after {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  margin-left: 10px;
+  display: inline-block;
+  width: clamp(30px, 6vw, 60px);
+  height: clamp(30px, 6vw, 60px);
+  background-image: url(../../svg/rain-svgrepo-com.svg);
+}
+
+.logotypes_city#light::after {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  margin-left: 10px;
+  display: inline-block;
+  width: clamp(30px, 6vw, 60px);
+  height: clamp(30px, 6vw, 60px);
+  background-image: url(../../svg/sun-svgrepo-com.svg);
+}
+
+.logotypes_city#cloudness::after {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  margin-left: 10px;
+  display: inline-block;
+  width: clamp(30px, 6vw, 60px);
+  height: clamp(30px, 6vw, 60px);
+  background-image: url(../../svg/cloud-sun-svgrepo-com.svg);
 }
 
 @media (max-width: 1400px) {

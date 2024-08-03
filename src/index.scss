@@ -14,7 +14,10 @@ html {
 
 body {
 	font-family: 'Courier New', Courier, monospace;
+	
 }
+
+
 
 .dark {
 	border-color: rgb(99, 98, 98);
@@ -43,7 +46,7 @@ body {
 	}
 }
 
-.rain {
+.rain, .cloudness {
 	border-color: rgb(99, 98, 98) ;
 	background: linear-gradient(
 		133deg,

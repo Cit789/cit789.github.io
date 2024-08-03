@@ -12,6 +12,7 @@ export default class Server {
 		isSnowfall: ',snowfall',
 		pressure: ',surface_pressure',
 		wind_speed: ',wind_speed_10m',
+		cloud_cover: ',cloud_cover',
 	}
 
 	static async weather_getAll(long, lat, forecast_days = 7, past_days = 0) {
