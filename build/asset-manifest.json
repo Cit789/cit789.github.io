@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/coolWeather/static/css/main.ff0db4ae.css",
+    "main.js": "/coolWeather/static/js/main.27790282.js",
+    "static/media/sun-svgrepo-com.svg": "/coolWeather/static/media/sun-svgrepo-com.e68cdd4b2326eb794eb5.svg",
+    "static/media/rain-svgrepo-com.svg": "/coolWeather/static/media/rain-svgrepo-com.162f4af1f809fc58dc6c.svg",
+    "static/media/search-svgrepo-com.svg": "/coolWeather/static/media/search-svgrepo-com.366930edb3adaa87a680.svg",
+    "static/media/cloud-sun-svgrepo-com.svg": "/coolWeather/static/media/cloud-sun-svgrepo-com.b188b21bdc33449e3e28.svg",
+    "static/media/moon-svgrepo-com.svg": "/coolWeather/static/media/moon-svgrepo-com.bea28668fa026cfc0df0.svg",
+    "index.html": "/coolWeather/index.html",
+    "static/media/snow-alt-svgrepo-com.svg": "/coolWeather/static/media/snow-alt-svgrepo-com.90c8ecbee025e3207114.svg",
+    "main.ff0db4ae.css.map": "/coolWeather/static/css/main.ff0db4ae.css.map",
+    "main.27790282.js.map": "/coolWeather/static/js/main.27790282.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff0db4ae.css",
+    "static/js/main.27790282.js"
+  ]
+}
