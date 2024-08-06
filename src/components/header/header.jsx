@@ -1,5 +1,6 @@
 import cl from './header.module.css'
 import support_citys from '../../support_citys/support_citys'
+import getValidString from '../../utils/getValidString'
 import { useState } from 'react'
 const Header = ({ setCoordinates, setCity }) => {
 	const [inputValue, setInputValue] = useState('')
@@ -17,23 +18,23 @@ const Header = ({ setCoordinates, setCity }) => {
 		setIsSearchVisible(true)
 		setInputValue(e.target.value)
 		const sortedCitys = support_citys.filter(item =>
-			Object.keys(item)[0].toLowerCase().includes(e.target.value.toLowerCase())
+			Object.keys(item)[0].toLowerCase().includes(getValidString(e.target.value))
 		)
 		setFilteredCitys(() => {
 			return e.target.value.length > 0 ? sortedCitys.slice(0, 4) : []
 		})
 	}
-	function clickOnCity(e) {
-		setInputValue(e.target.value)
+	function clickOnCity(city) {
+		setInputValue(city)
 		setIsSearchVisible(false)
-		setCity(e.target.value)
+		setCity(city)
 		
 		const selected_city = support_citys.find(
-			item => Object.keys(item)[0] === e.target.value
+			item => Object.keys(item)[0] === city
 		)
 		
-		if (e.target.value !== '') {
-			setCoordinates(selected_city[e.target.value])
+		if (city !== '') {
+			setCoordinates(selected_city[city])
 		}
 	}
 	return (
@@ -41,7 +42,6 @@ const Header = ({ setCoordinates, setCity }) => {
 			<nav className={cl.navigation}>
 				<div className={cl.variables}>
 					<input
-						
 						className={cl.search}
 						id={cl.searchID}
 						onInput={e => onInput(e)}
@@ -49,17 +49,21 @@ const Header = ({ setCoordinates, setCity }) => {
 					/>
 					<label htmlFor={cl.searchID} className={cl.label_search}></label>
 					{filteredCitys.length > 0 && isSearchVisible && (
-						<select
-							multiple
+						<ul
 							className={`${cl.list_citys} ${
 								isSearchVisible ? cl.openSearch : cl.closeSearch
 							}`}
-							onChange={e => clickOnCity(e)}
+							
 						>
 							{filteredCitys.map(item => (
-								<option key={item.id}>{Object.keys(item)[0]}</option>
+								<li
+									key={item.id}
+									onClick={() => clickOnCity(Object.keys(item)[0])}
+								>
+									{Object.keys(item)[0]}
+								</li>
 							))}
-						</select>
+						</ul>
 					)}
 				</div>
 			</nav>

@@ -21,14 +21,14 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
-        font-size: clamp(20px,7vw,30px);
+        font-size: clamp(20px,7vw,35px);
+        font-weight: 600;
         background-color: rgb(255, 255, 255);
         border: none;
         outline: none;
-        option{
-            height: 10px;
-        }
-        option:hover{
+        list-style: none;
+       
+        li:hover{
             background-color: rgb(214, 214, 214);
         }       
     }
