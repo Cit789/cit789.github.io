@@ -53,7 +53,7 @@ const LeftBlock = ({ city, setTheme, theme, coordinates }) => {
 							Сейчас: {server_data.temperature}°C
 						</h2>
 						<h3 className={cl.logotypes_pressure}>
-							Давление: {server_data.pressure}
+							Давление: {server_data.pressure}hpa
 						</h3>
 						<h3 className={cl.logotypes_wind_speed}>
 							Скорость ветра: {server_data.wind_speed}м/с
